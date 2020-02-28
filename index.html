@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!-- This is a comment tag -->
+		<meta charset="UTF-8" />
+		<title>Camera Shop</title>
+		<link rel="stylesheet" href="siteLayout.css" type="text/css" media="screen,projection" />
+		<link rel="stylesheet" href="siteTheme.css" type="text/css" media="screen,projection" />
+		<style>
+			/* For styling specific to this page */
+			#mainBody {
+				min-height: 615px;
+			}
+		</style>
+		<script src="jquery-2.2.0.min.js"></script>
+		<script src='CameraShop.js'></script>
+		<script>
+			
+			var timer;
+			
+			// Your global variables should be declared below here -v
+			
+			
+			// Your global variables should be declared above here -^
+			// Any user defined functions should be declared below here -v
+			
+			
+			// Any user defined functions should be declared above here -^
+		
+			$(document).ready(function() {
+				
+				// set a timed function call to wait for xml to load
+				timer = window.setInterval(function() {
+				
+					if (($products === null) || ($homepage === null))
+					{
+						return;
+					}
+					else
+					{
+						// Remove timer
+						window.clearInterval(timer);
+						
+						// Populate the nav bar
+						populateNav("navmenu");
+						
+						// Debug lines below.  Un-comment them to see in the developer tools console
+						// which product id's have been chosen
+						console.log(vars['prod1']);
+						console.log(vars['prod2']);
+						console.log(vars['prod3']);
+						console.log(vars['prod4']);
+						console.log(vars['prod5']);
+						console.log(vars['prod6']);
+						
+						// Your $(document).ready() script code goes below here -v
+						//filling the index page
+						$('#mainBody') 
+							//the title and its styling
+							.append("<h2>Highlights</h2>")
+								.css("text-align","center")  
+								.css("font-family","Courier New") //<a href =\'"+URL+"\'>link</a>
+								.css("font-size","40px")
+							//adding the images and the links to their details
+							.append('<a href ="/product.html?id='+ vars['prod1']+'"> <img src="/ProductImages/'+vars['prod1']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod2']+'"> <img src="/ProductImages/'+vars['prod2']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod3']+'"> <img src="/ProductImages/'+vars['prod3']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod4']+'"> <img src="/ProductImages/'+vars['prod4']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod5']+'"> <img src="/ProductImages/'+vars['prod5']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod6']+'"> <img src="/ProductImages/'+vars['prod6']+'.jpg"></a>');
+							
+						
+						
+						// Your $(document).ready() script code goes above here -^
+					}
+				
+				}, 100);
+				
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="logo.jpg" alt="Camera Shop Logo" />
+			<h1 id ="shopName">Camera Shop</h1>
+			<div id="searchBar"><form action="results.html">
+				Search: <input type="text" name='searchTerm' id="searchTerm" max-length="15"><input type="submit" id="theSubmit" value="Submit">
+			</form></div>
+		</header>
+		<ul class="navmenu">
+		</ul>
+		<div id="mainBody">
+		</div>
+		<footer>
+			<p>&copy Camera Shop 2018</p>
+		</footer>
+	</body>
+</html>
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!-- This is a comment tag -->
+		<meta charset="UTF-8" />
+		<title>Camera Shop</title>
+		<link rel="stylesheet" href="siteLayout.css" type="text/css" media="screen,projection" />
+		<link rel="stylesheet" href="siteTheme.css" type="text/css" media="screen,projection" />
+		<style>
+			/* For styling specific to this page */
+			#mainBody {
+				min-height: 615px;
+			}
+		</style>
+		<script src="jquery-2.2.0.min.js"></script>
+		<script src='CameraShop.js'></script>
+		<script>
+			
+			var timer;
+			
+			// Your global variables should be declared below here -v
+			
+			
+			// Your global variables should be declared above here -^
+			// Any user defined functions should be declared below here -v
+			
+			
+			// Any user defined functions should be declared above here -^
+		
+			$(document).ready(function() {
+				
+				// set a timed function call to wait for xml to load
+				timer = window.setInterval(function() {
+				
+					if (($products === null) || ($homepage === null))
+					{
+						return;
+					}
+					else
+					{
+						// Remove timer
+						window.clearInterval(timer);
+						
+						// Populate the nav bar
+						populateNav("navmenu");
+						
+						// Debug lines below.  Un-comment them to see in the developer tools console
+						// which product id's have been chosen
+						console.log(vars['prod1']);
+						console.log(vars['prod2']);
+						console.log(vars['prod3']);
+						console.log(vars['prod4']);
+						console.log(vars['prod5']);
+						console.log(vars['prod6']);
+						
+						// Your $(document).ready() script code goes below here -v
+						//filling the index page
+						$('#mainBody') 
+							//the title and its styling
+							.append("<h2>Highlights</h2>")
+								.css("text-align","center")  
+								.css("font-family","Courier New") //<a href =\'"+URL+"\'>link</a>
+								.css("font-size","40px")
+							//adding the images and the links to their details
+							.append('<a href ="/product.html?id='+ vars['prod1']+'"> <img src="/ProductImages/'+vars['prod1']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod2']+'"> <img src="/ProductImages/'+vars['prod2']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod3']+'"> <img src="/ProductImages/'+vars['prod3']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod4']+'"> <img src="/ProductImages/'+vars['prod4']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod5']+'"> <img src="/ProductImages/'+vars['prod5']+'.jpg"></a>')
+							.append('<a href ="/product.html?id='+ vars['prod6']+'"> <img src="/ProductImages/'+vars['prod6']+'.jpg"></a>');
+							
+						
+						
+						// Your $(document).ready() script code goes above here -^
+					}
+				
+				}, 100);
+				
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="logo.jpg" alt="Camera Shop Logo" />
+			<h1 id ="shopName">Camera Shop</h1>
+			<div id="searchBar"><form action="results.html">
+				Search: <input type="text" name='searchTerm' id="searchTerm" max-length="15"><input type="submit" id="theSubmit" value="Submit">
+			</form></div>
+		</header>
+		<ul class="navmenu">
+		</ul>
+		<div id="mainBody">
+		</div>
+		<footer>
+			<p>&copy Camera Shop 2018</p>
+		</footer>
+	</body>
+</html>
